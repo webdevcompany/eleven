@@ -1,0 +1,90 @@
+@mixin heading($size, $color, $family, $text-transform){
+	font-size: $size;
+	color: $color;
+	font-family: $family;
+	text-transform: $text-transform;
+}
+
+@mixin paragraph($size, $color, $family){
+	font-size: $size;
+	color: $color;
+	font-family: $family;
+} 
+
+/* menu links*/
+@mixin menu_links($size, $color, $family){
+	font-size: $size;
+	color: $color;
+	font-family: $family;
+}
+
+/*links*/
+@mixin site_links($size, $color, $family ){
+	font-size: $size;
+	color: $color;
+	font-family: $family;
+}
+
+/*flexes*/
+@mixin displey_flex($direction, $wrap, $justify, $align-items){
+	display: flex;
+	flex-direction:  $direction;
+	flex-wrap: $wrap;
+	justify-content:  $justify;
+	align-items: $align-items;
+}
+
+
+@mixin slider_global_arrows {
+	display: flex;
+	span.dashicons  {
+		width: clamp(2.5rem, calc(2.4242rem + 0.3788vw), 2.8125rem);
+		height: clamp(2.5rem, calc(2.4242rem + 0.3788vw), 2.8125rem);
+		background-color: $darkblue;
+		border: 1px solid $darkblue;
+		cursor: pointer;
+		transition: background-color 0.3s;
+		&:hover {
+			background-color: $white;
+			&::before {
+				color: $darkblue;
+			}
+		}
+		&::before {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			height: 100%;
+			color: $white;
+			font-size: 25px;
+			padding: 5px;
+		}
+	}
+	span.serv_slider_right {
+		margin-left: 2px;
+	}
+	
+}
+
+
+/* red button */
+
+@mixin SteelBlue_button(){
+	background-color: $steelBlue;
+	border: 1px solid $steelBlue;
+	border-radius: 25px;
+	padding: 12px 30px;
+	margin-top: 25px;
+	display: block;
+	color: $white;
+	text-decoration: none;
+	font-family: $DmSensMedium;
+	font-size: 16px;
+	transition: 0.3s;
+	&:hover {
+		background-color: $darkblue;
+		color: $white;
+		border: 1px solid $white;
+	}
+}

@@ -1,0 +1,12 @@
+{
+  "name": "creative",
+  "version": "1.0.0",
+  "description": "grunt test description",
+  "devDependencies": {
+    "autoprefixer": "^6.3.4",
+    "grunt": "latest",
+    "grunt-contrib-sass": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-postcss": "latest"
+  }
+}

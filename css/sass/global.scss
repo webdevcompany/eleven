@@ -1,0 +1,124 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+#wpadminbar {
+	position: fixed !important;
+}
+
+body:not(.elementor-editor-active) {
+	opacity: 0;
+	min-height: 100vh
+}
+
+body {
+	overflow-x: hidden;
+	h1, h1.elementor-heading-title,
+	h2, h2.elementor-heading-title,
+	h3, h3.elementor-heading-title {
+		word-break: break-word;
+	}
+
+	h1, h1.elementor-heading-title {
+		font-size: clamp(1.5rem, calc(1.1364rem + 1.8182vw), 3rem);
+		line-height: clamp(2rem, calc(1.6364rem + 1.8182vw), 3.5rem);
+	}
+
+	h2, h2.elementor-heading-title {
+		font-size: clamp(1.375rem, calc(1.1932rem + 0.9091vw), 2.125rem);
+		line-height: clamp(1.875rem, calc(1.6932rem + 0.9091vw), 2.625rem);
+	}
+
+	h3, h3.elementor-heading-title {
+		font-size: clamp(1.25rem, calc(1.0682rem + 0.9091vw), 2rem);
+		line-height: clamp(1.625rem, calc(1.4129rem + 1.0606vw), 2.5rem);
+	}
+	
+	img {
+		max-width: 100%;
+		height: auto;
+		display: flex;
+	}
+	
+	.content_dynamic_paddings,  
+	.elementor-widget-text-editor > .elementor-widget-container,
+	.elementor-widget-theme-post-content .elementor-widget-text-editor, 
+	.elementor-accordion .elementor-tab-content  {
+		h2:not(:last-child), 
+		h3:not(:last-child), 
+		h4:not(:last-child), 
+		h5:not(:last-child), 
+		h6:not(:last-child), 
+		p:not(:last-child),
+		ul:not(:last-child),
+		ol:not(:last-child) {
+			padding-bottom: 20px;
+			margin: 0;
+		}
+		ul {
+			li {
+				list-style: none;
+				display: flex;
+				align-items: baseline;
+				&::before {
+					content: "";
+					display: inline-block;
+					min-width: 6px;
+					min-height: 6px;
+					background-color: currentColor;
+					margin-right: 10px;
+					position: relative;
+					top: -2px;
+					border-radius: 50%;
+				}
+				&:not(:first-child) {
+					margin-top: 5px;
+				}
+			}
+		}
+		ol {
+			counter-reset: list-number;
+			li {
+				list-style: none;
+				position: relative;
+				padding-left: 20px;
+				&::before {
+					counter-increment: list-number;
+					content: counter(list-number) ".";
+					color: currentColor;
+					position: absolute;
+					left: 0;
+					top: 0;
+				}
+				&:not(:first-child) {
+					margin-top: 8px;
+				}
+			}
+		}
+		a {
+			color: currentColor;
+			text-decoration: underline;
+			text-decoration-color: currentColor;
+			border-bottom: unset;
+			&:hover {
+				color: $red;
+			}
+		}
+	}
+	
+	section.page_banner_section {
+		min-height: clamp(8.75rem, calc(-0.2148rem + 39.8438vw), 40.625rem);
+	}
+
+	.elementor-widget-google_maps {
+		filter: grayscale(100%) !important;
+		iframe {
+			height: clamp(15.625rem, calc(10.3516rem + 23.4375vw), 34.375rem) !important;
+		}
+	}
+	
+
+}
+
