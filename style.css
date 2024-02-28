@@ -32,6 +32,7 @@ body:not(.elementor-editor-active) {
 }
 
 body {
+  border: 2px solid red;
   overflow-x: hidden;
 }
 body h1, body h1.elementor-heading-title,
